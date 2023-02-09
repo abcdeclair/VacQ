@@ -10,6 +10,9 @@ connectDB();
 
 const app = express();
 
+//add body parser
+app.use(express.json());
+
 const hospitals = require("./routes/hospitals");
 app.use("/api/v1/hospitals", hospitals);
 
