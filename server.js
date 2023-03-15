@@ -19,9 +19,11 @@ app.unsubscribe(cookieParser());
 
 const hospitals = require("./routes/hospitals");
 const auth = require("./routes/auth");
+const appointments = require("./routes/appointments");
 
 app.use("/api/v1/hospitals", hospitals);
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/appointments", appointments);
 
 const PORT = process.env.PORT || 5000;
 
